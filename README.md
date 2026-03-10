@@ -1,6 +1,16 @@
-# Router Express
+<p align="center">
+  <img src="docs/images/banner.svg" alt="Router Express banner" />
+</p>
 
-Auto-configuration services development for Ethernet, ADSL and Voice client routers, using DHCP66 and TR069 standards
+<h1 align="center">Router Express</h1>
+
+<p align="center">
+  <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT" /></a>
+</p>
+
+<p align="center">Auto-configuration services development for Ethernet, ADSL and Voice client routers, using DHCP66 and TR069 standards</p>
+
+---
 
 Development of TR069 and DHCP66 autoconfiguration services for all the entire network of an ISP properly anonymized. Creation of a WebApp based on R with scripts on Python that gives complete Internet access for a new client. It signs in a new client in the Ticket's database and in two Radius servers, picking up all the data from the principal Management software that the company uses.
 
@@ -10,9 +20,8 @@ All the project documentation is in Spanish due to the inability of some team me
 
 ## Author
 
-* **Sergio Fernández** - *Creator* - [DrumSergio](https://github.com/DrumSergio)
+[@GeiserX](https://github.com/GeiserX)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
