@@ -18,6 +18,13 @@ Development of TR069 and DHCP66 autoconfiguration services for all the entire ne
 
 All the project documentation is in Spanish due to the inability of some team members to read it in English.
 
+## Related ISP/Telecom Tools
+
+- [genieacs-container](https://github.com/GeiserX/genieacs-container) — Helm chart and container for GenieACS TR-069
+- [services-isp](https://github.com/GeiserX/services-isp) — Automate common ISP operational tasks
+- [statix](https://github.com/GeiserX/statix) — Real-time ISP network statistics dashboard
+- [ScriptPoblar](https://github.com/GeiserX/ScriptPoblar) — Batch device provisioning and CRM operations
+
 ## Author
 
 [@GeiserX](https://github.com/GeiserX)
