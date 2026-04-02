@@ -5,7 +5,7 @@
 <h1 align="center">Router Express</h1>
 
 <p align="center">
-  <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License: GPL-3.0" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License: GPL-3.0" /></a>
 </p>
 
 <p align="center">Auto-configuration services development for Ethernet, ADSL and Voice client routers, using DHCP66 and TR069 standards</p>
@@ -31,4 +31,4 @@ All the project documentation is in Spanish due to the inability of some team me
 
 ## License
 
-This project is licensed under the GPL-3.0 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details
