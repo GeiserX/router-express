@@ -18,7 +18,7 @@ An R/Shiny web app, with Python helpers, that gives a new client Internet access
 
 ## Quick start
 
-You need R with `shiny`, `shinyjs`, `RMySQL`, `digest` and `stringr`, plus MySQL access to Xgest and the RADIUS servers and a GenieACS instance. Set the hosts and passwords in `server.R` (lines 28, 290, 336, 356, 454, 577, 629), then:
+You need R with `shiny`, `shinyjs`, `RMySQL`, `digest` and `stringr`, plus MySQL access to Xgest and the RADIUS servers and a GenieACS instance. The code expects the checkout at `/home/tecnico/WebApp` (`server.R` line 22 sets it as the working directory); clone it there or edit that line. Set the hosts and passwords in `server.R` (lines 28, 290, 336, 356, 454, 577, 629), then:
 
 ```bash
 Rscript -e 'shiny::runApp(".", port = 8081, host = "127.0.0.1")'
