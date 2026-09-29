@@ -1,34 +1,38 @@
 <p align="center">
-  <img src="docs/images/banner.svg" alt="Router Express banner" />
+  <img src="docs/images/banner.svg" alt="Router Express" />
 </p>
 
 <h1 align="center">Router Express</h1>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License: GPL-3.0" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/GeiserX/router-express" alt="License" /></a>
 </p>
 
-<p align="center">Auto-configuration services development for Ethernet, ADSL and Voice client routers, using DHCP66 and TR069 standards</p>
+<p align="center">Auto-configuration of an ISP's client routers (Ethernet, ADSL, voice) over DHCP option 66 and TR-069</p>
 
 ---
 
-Development of TR069 and DHCP66 autoconfiguration services for all the entire network of an ISP properly anonymized. Creation of a WebApp based on R with scripts on Python that gives complete Internet access for a new client. It signs in a new client in the Ticket's database and in two Radius servers, picking up all the data from the principal Management software that the company uses.
+An R/Shiny web app, with Python helpers, that gives a new client Internet access in one form: it reads the client from the Xgest ERP, creates the PPPoE and HotSpot users on two RADIUS servers, pushes the router's config over TFTP (DHCP option 66) or GenieACS (TR-069), and opens the Web Help Desk ticket.
 
-[Project presented as a Final Project at University in 2015](http://repositorio.upct.es/xmlui/handle/10317/5245)
+[Project presented as a Final Project at University in 2015](http://repositorio.upct.es/xmlui/handle/10317/5245). The FAQ ([`FAQ/FAQ.Rmd`](FAQ/FAQ.Rmd)) is in Spanish.
 
-All the project documentation is in Spanish due to the inability of some team members to read it in English.
+## Quick start
 
-## Related ISP/Telecom Tools
+You need R with `shiny`, `shinyjs`, `RMySQL`, `digest` and `stringr`, plus MySQL access to Xgest and the RADIUS servers and a GenieACS instance. Set the hosts and passwords in `server.R` (lines 28, 290, 336, 356, 454, 577, 629), then:
 
-- [genieacs-container](https://github.com/GeiserX/genieacs-container) — Helm chart and container for GenieACS TR-069
-- [services-isp](https://github.com/GeiserX/services-isp) — Automate common ISP operational tasks
-- [statix](https://github.com/GeiserX/statix) — Real-time ISP network statistics dashboard
-- [ScriptPoblar](https://github.com/GeiserX/ScriptPoblar) — Batch device provisioning and CRM operations
+```bash
+Rscript -e 'shiny::runApp(".", port = 8081, host = "127.0.0.1")'
+```
 
-## Author
+Open http://127.0.0.1:8081. Ticket creation shells out to `tickets.py` (Python 2, Selenium, PhantomJS).
 
-[@GeiserX](https://github.com/GeiserX)
+## Related projects
+
+- [genieacs-container](https://github.com/GeiserX/genieacs-container): Helm chart and container for GenieACS TR-069
+- [services-isp](https://github.com/GeiserX/services-isp): automates common ISP operational tasks
+- [statix](https://github.com/GeiserX/statix): ISP network statistics dashboard
+- [ScriptPoblar](https://github.com/GeiserX/ScriptPoblar): adopts a whole network of devices into CRM Control in parallel
 
 ## License
 
-This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details
+[GPL-3.0-or-later](LICENSE)
